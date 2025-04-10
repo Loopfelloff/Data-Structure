@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "iostream": "cpp",
+        "array": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "map": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "vector": "cpp",
+        "string": "cpp",
+        "ostream": "cpp"
+    }
+}
