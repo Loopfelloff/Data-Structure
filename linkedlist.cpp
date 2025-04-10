@@ -46,10 +46,23 @@
             Head = Head->next;
             delete tempNode;
             tempNode = nullptr;
+            if(Head == nullptr) Tail = Head;
         }
-        void removeFromTail(){
-            Node* tempNode = Tail;
-
+        void removeFromTail(){ 
+            if(isEmpty()) return;
+            if(Head == Tail) Head=Tail=nullptr;
+            else{
+            Node* tempNode = Head;
+            while(tempNode->next != Tail)
+            {
+                tempNode = tempNode->next;
+            } 
+            tempNode->next = nullptr; 
+            Node* toremoveNode = Tail;
+            delete toremoveNode;
+            toremoveNode = nullptr;
+            Tail = tempNode;
+        }
         }
         void Traverse()
         {
@@ -62,16 +75,4 @@
             }
         }
     };
-    int main(){
-        List *myList = new List();
-        myList->addToHead(5);
-        myList->addToHead(6);
-        myList->addToHead(7);
-        myList->addToTail(8);
-        Node* tempNode = myList->Head->next;
-        myList->addToNode(4 , tempNode);
-        myList->removeFromHead();
-        myList->Traverse();
-        cout<<myList->isEmpty();
-        return 0;
-    }
+   
