@@ -17,7 +17,7 @@
         myList->addToHead(4);
         myList->addToHead(3);
         myList->addToHead(2);// if even numbers are present it gives off the right most value between the two middle items.
-        // myList->addToHead(1); 
+        myList->addToHead(1); 
         Node* middle = findmiddle(myList->Head);
         cout<<middle->info<<endl;
         return 0;
